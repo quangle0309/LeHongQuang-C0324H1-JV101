@@ -1,0 +1,10 @@
+table{
+    text-align: center;
+    font-family: arial, sans-serif;
+    width: 100%;
+    border: 1px solid #dddddd;
+}
+
+.row {
+    background-color: #dddddd;
+}
