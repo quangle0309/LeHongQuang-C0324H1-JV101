@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Diện tích hình tròn</title>
+</head>
+<body>
+    <input id="s" type="number" placeholder="nhập bán kính"/>
+    <button onclick="area()">Tính</button>
+    <p id="result"></p>
+</body>
+</html>
+<script>
+    function area() {
+        let r = document.getElementById("s").value;
+        let circleArea = Math.PI * Math.pow(r, 2);
+        document.getElementById("result").innerHTML = 'Diện tích hình tròn là: ' + circleArea;
+
+    }
+</script>

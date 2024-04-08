@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Chu Vi Hình tròn</title>
+</head>
+<body>
+    <input id="s" type="number" placeholder="nhập bán kính"/>
+    <button onclick="chuVi()">Tính</button>
+    <p id="result"></p>
+</body>
+</html>
+<script>
+    function chuVi() {
+        let r = document.getElementById("s").value;
+        let circleArea = Math.PI * 2 * r;
+        document.getElementById("result").innerHTML = 'Chu vi hình tròn là: ' + circleArea;
+
+    }
+</script>
