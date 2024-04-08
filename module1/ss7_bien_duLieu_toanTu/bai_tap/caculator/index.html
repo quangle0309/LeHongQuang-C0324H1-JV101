@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Caculator</title>
+</head>
+<body>
+    <input type="number" id="num1"/>
+    <input type="number" id="num2"/>
+    <button onclick="sum()">Cộng</button>
+    <button onclick="dif()">Trừ</button>
+    <button onclick="pro()">Nhân</button>
+    <button onclick="quotient()">Chia</button>
+    <h4>Result: </h4>
+    <p id="result"></p>
+</body>
+</html>
+<script>
+
+    function sum() {
+        let n1= document.getElementById("num1").value;
+        let n2 = document.getElementById("num2").value;
+        document.getElementById("result").innerHTML = (Number(n1) + Number(n2));
+    }
+    function dif() {
+        let n1= document.getElementById("num1").value;
+        let n2 = document.getElementById("num2").value;
+        document.getElementById("result").innerHTML = (Number(n1) - Number(n2));
+    }
+    function pro() {
+        let n1= document.getElementById("num1").value;
+        let n2 = document.getElementById("num2").value;
+        document.getElementById("result").innerHTML = (Number(n1) * Number(n2));
+    }
+    function quotient() {
+        let n1= document.getElementById("num1").value;
+        let n2 = document.getElementById("num2").value;
+        document.getElementById("result").innerHTML = (Number(n1) / Number(n2));
+    }
+
+</script>
