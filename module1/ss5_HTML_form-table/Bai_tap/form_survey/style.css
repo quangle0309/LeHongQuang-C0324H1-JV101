@@ -1,0 +1,49 @@
+#head {
+    padding-bottom: 20px;
+    border-bottom: black dotted 1px;
+}
+
+#money {
+    margin: 0 100px 10px 50px;
+}
+
+#cents {
+    width: 30px;
+}
+
+#features {
+    width: 100%;
+    height: 100px;
+}
+
+table {
+    width:100%;
+    text-align: center;
+    border-collapse: collapse;
+}
+
+th, td {
+    border: black solid 1px;
+
+}
+
+#row1 {
+    background-color: #edddfd;
+}
+
+#row3 {
+    background-color: #fdddf8;
+}
+
+.col1 {
+    text-align: left;
+    padding-left: 10px;
+}
+
+.col2, .col3, .col4, .col5 {
+    width: 200px;
+}
+
+#row1, #row2, #row3, #row4 {
+    height: 40px;
+}
