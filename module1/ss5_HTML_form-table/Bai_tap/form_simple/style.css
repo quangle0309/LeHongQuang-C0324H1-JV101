@@ -9,19 +9,40 @@ form {
     margin-left: 10%;
     background-color: white;
     width: 80%;
+    position: absolute;
 }
-.header {
+h2 {
+    padding-top: 5px;
+    position: relative;
     text-align: center;
     background-color: #f8320f;
     color: white;
-    padding-top: 5px;
-    margin: 26px 5px 5px 5px;
+    margin: 5px;
 }
 
 #hobby, #email, #name {
     color: blue;
 }
 
+
 .list-hobby {
     color:#f8320f;
+    margin-left: 100px;
+    margin-top: 5px;
+}
+
+#name {
+    margin-top: 10px;
+    margin-left: 100px;
+}
+
+#email {
+    margin-top: 10px;
+    margin-left: 124px;
+}
+
+.button {
+    margin-left: 162px;
+    margin-top: 5px;
+    padding-bottom: 6px;
 }
