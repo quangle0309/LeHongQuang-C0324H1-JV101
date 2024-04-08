@@ -1,6 +1,9 @@
 
 // Đây là một chú thích dòng đơn.
-var x = 5; // Gán giá trị 5 cho biến x
+
+let a = 10 // Gán giá trị 10 cho biến a
+
+
 
 /*
 Đây là một chú thích nhiều dòng
