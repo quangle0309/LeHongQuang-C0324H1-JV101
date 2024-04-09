@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Luyện tập cấu trúc if else</title>
+</head>
+<body>
+    <p>What is the “official” name of JavaScript?</p>
+    <input type="text" id="textIn"/>
+    <button onclick="quest()">Kiểm tra</button>
+    <p id="textOut"></p>
+</body>
+</html>
+<script>
+    function quest() {
+        let t = document.getElementById("textIn").value;
+        if (t == "ECMAScript") {
+            document.getElementById("textOut").innerHTML = "Right!"
+        } else {
+            document.getElementById("textOut").innerHTML = "Didn’t know? ECMAScript!"
+        }
+    }
+</script>
