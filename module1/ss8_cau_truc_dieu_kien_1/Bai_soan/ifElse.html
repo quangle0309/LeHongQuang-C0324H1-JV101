@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Luyện tập cấu trúc if else</title>
+</head>
+<body>
+    <input type="number" placeholder="Nhập vào điểm giá trị từ 0 đến 100" id="pointIn"/>
+    <button onclick="point()">Kiểm Tra</button>
+</body>
+</html>
+<script>
+    function point() {
+        let p = document.getElementById("pointIn").value;
+        if ((p >= 75) && (p <= 100)) {
+            alert("Pass module")
+        } else if ((p >= 0) && (p < 75)) {
+
+        } else {
+            alert("Vui lòng nhập đúng giá trị từ 0 đến 100");
+        }
+    }
+</script>

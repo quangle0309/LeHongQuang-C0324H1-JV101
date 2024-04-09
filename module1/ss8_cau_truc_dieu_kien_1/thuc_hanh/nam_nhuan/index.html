@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Tính năm nhuận</title>
+</head>
+<body>
+    <input placeholder="Nhập năm" type="number" id="yearIn"/>
+    <button onclick="leapYear()">Nhập</button>
+</body>
+</html>
+<script>
+    function leapYear() {
+        let year = document.getElementById("yearIn").value;
+        if ((year % 4) == 0 && (year % 100) != 0) {
+            alert("Đây là năm nhuận")
+        } else if ((year % 100) == 0 && (year % 400) == 0) {
+            alert("Đây là năm nhuận");
+        } else {
+            alert("Đây không phải là năm nhuận");
+        }
+    }
+</script>
