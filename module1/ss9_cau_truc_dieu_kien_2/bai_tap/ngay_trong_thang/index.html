@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Kiểm tra số ngày trong tháng</title>
+</head>
+<body>
+    <input placeholder="Nhập tháng" type="number" id="thangIn" />
+    <button onclick="dayOfMonth()">Kiểm Tra</button>
+    <p id="ngay"></p>
+</body>
+</html>
+<script>
+    function dayOfMonth() {
+        let thang = +document.getElementById("thangIn").value;
+        switch (thang) {
+            case 1:
+            case 3:
+            case 5:
+            case 7:
+            case 10:
+            case 12:
+                document.getElementById("ngay").innerHTML = "Tháng " + thang + " Có 31 ngày";
+                break;
+            case 4:
+            case 6:
+            case 8:
+            case 9:
+            case 11:
+                document.getElementById("ngay").innerHTML = "Tháng " + thang + " Có 30 ngày";
+                break;
+            case 2:
+                let nam = +prompt("Nhập năm cần kiểm tra")
+                if ((nam % 4 === 0 && nam % 100 !== 0) || (nam % 400) === 0) {
+                    document.getElementById("ngay").innerHTML = "Tháng " + thang + " Có 29 ngày";
+                } else {
+                    document.getElementById("ngay").innerHTML = "Tháng " + thang + " Có 28 ngày";
+                }
+                break;
+            default:
+                document.getElementById("ngay").innerHTML = "Không phải tháng trong năm";
+        }
+    }
+
+</script>

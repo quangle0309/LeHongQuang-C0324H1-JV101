@@ -1,0 +1,28 @@
+#caculator {
+    border: black solid 5px;
+    width: 300px;
+    height: 250px;
+}
+
+#numberIn {
+    margin: 3px;
+    width: 95%;
+    height: 40px;
+    border: blue solid 2px;
+    font-weight: bold;
+    color: blue;
+    font-size: 20px;
+}
+
+table {
+    width: 90%;
+    height: 80%;
+    text-align: ;
+}
+
+.btn {
+    font-weight: bold;
+    font-size: 20px;
+    width: 71px;
+    height: 40px;
+}
