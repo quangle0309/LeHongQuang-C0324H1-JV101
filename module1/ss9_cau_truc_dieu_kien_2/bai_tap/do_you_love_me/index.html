@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Bạn có thích tôi không?</title>
+    <link rel="stylesheet" href="style.css"/>
+</head>
+<body>
+    <form>
+        <h1>Bạn có thích tôi không?</h1>
+        <button id="y1" onclick="yes()">Có</button>
+        <button id="y" onclick="yes()">Có</button>
+        <button id="n" onmouseover="no()" >Không</button>
+    </form>
+</body>
+</html>
+<script>
+    function yes() {
+        alert("Ohhh, tôi cũng thích bạn đấy :>")
+    }
+    function no() {
+        let h = Math.round(Math.random() * window.innerHeight);
+        let w = Math.round(Math.random() * window.innerWidth);
+        document.getElementById("n").style.top = h + "px";
+        document.getElementById("n").style.left = w + "px";
+    }
+</script>
