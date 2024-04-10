@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Tính chiều cao cân nặng cơ thể</title>
+    <link rel="stylesheet" href="style.css"/>
+</head>
+<body>
+    <form>
+        <h3>Tính chỉ số BMI</h3>
+        <table>
+            <tr>
+                <td><lable>Nhập chiều cao của bạn (m)</lable></td>
+                <td><input type="number" id="heightIn"/></td>
+            </tr>
+            <tr>
+                <td><lable>Nhập cân nặng của bạn (kg)</lable></td>
+                <td><input type="number" id="weightIn"/></td>
+            </tr>
+        </table>
+
+        <button id="button" onclick="bmi(); bodyCondition()">Kiểm tra</button>
+        <br/>
+        <lable>Chỉ số BMI của bạn là: </lable>
+        <lable id="bmiOut"></lable>
+        <p id="body"></p>
+    </form>
+</body>
+</html>
+<script>
+    function bmi() {
+        let h = +document.getElementById("heightIn").value;
+        let w = +document.getElementById("weightIn").value;
+        let bmi = w / Math.pow(h, 2);
+        document.getElementById("bmiOut").innerHTML = bmi.toFixed(2);
+    }
+    function bodyCondition() {
+        let h = +document.getElementById("heightIn").value;
+        let w = +document.getElementById("weightIn").value;
+        let BMI = w / Math.pow(h, 2);
+        if (BMI < 16) {
+            document.getElementById("body").innerHTML = "Bạn đang bị gầy cấp độ 3. Cố gắng ăn nhiều vào nha" + "<img src='https://i.pinimg.com/originals/3b/97/63/3b97635b6bd4a5bfc436fbd3908f05e0.gif' width='50' height= '50'>";
+        } else if (BMI < 17) {
+            document.getElementById("body").innerHTML = "Bạn đang bị gầy cấp độ 2";
+        } else if (BMI < 18.5) {
+            document.getElementById("body").innerHTML = "Bạn đang bị gầy cấp độ 1";
+        } else if (BMI < 25) {
+            document.getElementById("body").innerHTML = "Thân hình của bạn rất cân đối";
+        } else if (BMI < 30) {
+            document.getElementById("body").innerHTML = "Có vẻ bạn hơi thừa cân";
+        } else if (BMI < 35) {
+            document.getElementById("body").innerHTML = "Bạn đang bị béo phì cấp độ 1";
+        } else if (BMI < 40) {
+            document.getElementById("body").innerHTML = "Bạn đang bị béo phì cấp độ 2";
+        }else {
+            document.getElementById("body").innerHTML = "Bạn dang bị béo phì cấp độ 3" + "<img src = 'https://i.pinimg.com/originals/73/4d/11/734d11cc677595ce3c3e5e3bba02721f.gif' width='50' height= '50'>";
+        }
+
+    }
+</script>

@@ -1,0 +1,21 @@
+
+#heightIn {
+    margin: 20px 0 20px 20px;
+}
+
+#weightIn {
+    margin: 20px 0 20px 20px;
+}
+
+#button {
+    margin: 0px 0 10px 206px;
+}
+
+#bmiOut {
+    font-weight: bold;
+}
+
+#body {
+    margin-left: 20px;
+    font-weight: bold;
+}
