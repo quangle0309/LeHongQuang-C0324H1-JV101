@@ -5,8 +5,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="820d10d0-10f4-4a40-89d5-097d30bab38a" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/ngay_trong_thang/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -38,6 +37,7 @@
     &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
     &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
     &quot;git-widget-placeholder&quot;: &quot;main&quot;,
+    &quot;last_opened_file_path&quot;: &quot;D:/workSpace/codeGym/module1/ss9_cau_truc_dieu_kien_2/bai_tap&quot;,
     &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
     &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
     &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
@@ -56,6 +56,9 @@
       <updated>1712733457495</updated>
       <workItem from="1712733458501" duration="1323000" />
       <workItem from="1712734940600" duration="3000" />
+      <workItem from="1712803059412" duration="1246000" />
+      <workItem from="1712804440609" duration="77000" />
+      <workItem from="1712806026330" duration="70000" />
     </task>
     <servers />
   </component>
