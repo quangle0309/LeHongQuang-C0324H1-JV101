@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Tìm giá trị lớn nhất trong 3 số nguyên</title>
+</head>
+<body>
+
+</body>
+</html>
+<script>
+    let num1 = +prompt("Nhập vào một số bất kì");
+    let num2 = +prompt("Nhập vào một số bất kì");
+    let num3 = +prompt("Nhập vào một số bất kì");
+if (num1 != num2 && num1 != num3 && num2 != num3) {
+    if (num1 > num2 && num1 > num3) {
+        alert(num1 + " là số lớn nhất");
+    } else if (num2 > num1 && num2 > num3) {
+        alert(num2 + " là số lớn nhất");
+    } else {
+        alert(num3 + " là số lớn nhất");
+    }
+} else {
+    alert("Có giá trị bằng nhau");
+}
+
+</script>

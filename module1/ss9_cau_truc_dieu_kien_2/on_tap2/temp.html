@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Chuyển đổi nhiệt độ</title>
+</head>
+<body>
+    <input id="temp-in" type="number" placeholder="nhập độ c: "/>
+    <button onclick="tempC()" >Chuyển đổi</button>
+    <p id="temp-out"></p>
+</body>
+</html>
+<script>
+    function tempC() {
+        let doC = +document.getElementById("temp-in").value;
+        document.getElementById("temp-out").innerHTML = doC * 9 / 5 + 32;
+    }
+</script>

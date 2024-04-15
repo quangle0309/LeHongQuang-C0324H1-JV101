@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Kiểm tra số nguyên tố đầu tiên</title>
+</head>
+<body>
+
+</body>
+</html>
+<script>
+    function firstSnt(num) {
+        let count = 0;
+        let primeNum = 0;
+        for (let i = 2; i < 1000; i++) {
+            if (primeNum < num) {
+                for (let j = 1; j <= i; j++) {
+                    if(i % j === 0) {
+                        count++
+                    }
+                }
+                if (count === 2) {
+                    document.write(i + "<br/>");
+                    primeNum++
+                }
+                count = 0;
+            } else {
+                break;
+            }
+        }
+    }
+    let num = +prompt("Số nguyên tố đầu tiên");
+    firstSnt(num);
+</script>

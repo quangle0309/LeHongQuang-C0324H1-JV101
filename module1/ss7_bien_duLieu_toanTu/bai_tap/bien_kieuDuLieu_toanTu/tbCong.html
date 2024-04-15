@@ -9,15 +9,18 @@
 </body>
 </html>
 <script>
-    var a = prompt("Nhập điểm môn Vật lý");
-    var b = prompt("Nhập điểm môn Hóa học");
-    var c = prompt("Nhập điểm môn Sinh học");
-    let vatLy = parseInt(a);
-    let hoaHoc = parseInt(b);
-    let sinhHoc = parseInt(c);
-    var trungBinh = (vatLy + hoaHoc + sinhHoc)/3;
-    var tong = vatLy + hoaHoc + sinhHoc;
-    document.write('Điểm trung bình là: ' + trungBinh);
-    document.write('<br/>');
-    document.write('Tổng điểm 3 môn là: ' + tong);
+    var vatLy = +prompt("Nhập điểm môn Vật lý");
+    var hoaHoc = +prompt("Nhập điểm môn Hóa học");
+    var sinhHoc = +prompt("Nhập điểm môn Sinh học");
+   if ((vatLy >= 0 && vatLy <=10) && (hoaHoc >= 0 && hoaHoc <=10) && (sinhHoc >= 0 && sinhHoc <=10)) {
+       var trungBinh = (vatLy + hoaHoc + sinhHoc)/3;
+       var tong = vatLy + hoaHoc + sinhHoc;
+       document.write('Điểm trung bình là: ' + trungBinh);
+       document.write('<br/>');
+       document.write('Tổng điểm 3 môn là: ' + tong);
+   } else {
+       alert("Yêu cầu nhập đúng giá trị từ 0 đến 10");
+   }
+
+
 </script>

@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Xếp hạng học lực</title>
+</head>
+<body>
+
+</body>
+</html>
+<script>
+    let diemKiemTra = +prompt("nhập điểm kiểm tra của bạn: ");
+    let diemGiuaKy = +prompt("nhập điểm giữa kỳ của bạn: ");
+    let diemCuoiKy = +prompt("nhập điểm cuối kỳ của bạn: ");
+    if ((diemKiemTra >= 0 && diemKiemTra <= 10) && (diemGiuaKy >= 0 && diemGiuaKy <= 10) && (diemCuoiKy >= 0 && diemCuoiKy <= 10)){
+        let diemTong = (diemKiemTra * 0.2) + (diemGiuaKy * 0.2) + (diemCuoiKy * 0.6);
+        if (diemTong >= 8) {
+            alert("Điểm của bạn là" + diemTong + "Bạn đạt học sinh giỏi");
+        } else if (diemTong >= 6.5) {
+            alert("Điểm của bạn là" + diemTong + "Bạn đạt học sinh khá");
+        } else if (diemTong >= 5) {
+            alert("Điểm của bạn là" + diemTong + "Bạn là học sinh trung bình");
+        } else if (diemTong >= 3) {
+            alert("Điểm của bạn là" + diemTong + "Bạn là học sinh yếu");
+        } else {
+            alert("Điểm của bạn là" + diemTong + "Bạn là học sinh kém");
+        }
+    } else {
+        alert("Bạn nhập sai giá trị, vui lòng nhập điểm từ 0 đến 10");
+    }
+</script>
