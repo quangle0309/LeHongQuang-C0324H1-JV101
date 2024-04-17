@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Tính giai thừa</title>
+</head>
+<body>
+
+</body>
+</html>
+<script>
+    let i = +prompt("Nhập vào số");
+    let factorial = 1;
+    if (i === 1) {
+        document.write("Giai thừa của " + i + " là: 1");
+    }
+    for (let j = 1; j <= i; j++) {
+        factorial = factorial * j;
+    }
+    document.write("Giai thừa của " + i + " là: " + factorial);
+</script>

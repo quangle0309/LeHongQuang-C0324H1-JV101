@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+</body>
+</html>
+<script>
+    function pointAverage() {
+        let count;
+        let p;
+        let sum = 0;
+        let average;
+        do {
+            count = +prompt("Nhập tổng số học sinh: ");
+            if (!Number.isInteger(count) || count < 0) {
+                alert("Số học sinh là 1 số nguyên lớn hơn 0!!! Vui lòng nhập lại.");
+            } else if (count === 0) {
+                alert("Đã hủy chương trình!!!");
+                return;
+            }
+        } while (!Number.isInteger(count) || count <= 0);
+
+        let pointClass = new Array(count);
+        let length = pointClass.length;
+
+        for (let i = 0; i < length; i++) {
+            do {
+                p = prompt("Nhập điểm học sinh: " + (i + 1));
+                if (p === null) {
+                    alert("Đã hủy chương trình!!!");
+                    return;
+                } else if (isNaN(p) || p <= 0 || p > 10) {
+                    alert("Bạn đã nhập sai. Điểm có giá trị từ 0 đến 10!!! Vui lòng nhập lại.")
+                } else if (p === '0') {
+                    p = 0;
+                    break;
+                } else {
+                    p = +p;
+                }
+            } while (isNaN(p) || p <= 0 || p > 10);
+            pointClass[i] = p;
+        }
+        for (let j = 0; j < length; j++) {
+            sum += pointClass[j];
+        }
+        average = sum / length;
+        alert("Điểm trung bình của lớp là: " + average);
+    }
+    pointAverage();
+</script>

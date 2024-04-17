@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Play game</title>
+</head>
+<body>
+    <button onclick="newGame()">Bắt Đầu</button>
+</body>
+</html>
+<script>
+    function newGame() {
+        let num = +prompt("Nhập khoảng số lớn nhất mà bạn muốn đoán");
+        let selectNum = +prompt("Số bạn chọn là");
+        let randomNum = Math.floor(Math.random() * (num+1));
+        let i = 0;
+
+        while (i < 3) {
+            if (selectNum > randomNum) {
+                alert("Số bạn chọn lớn hơn");
+            } else if (selectNum < randomNum) {
+                alert("Số bạn chọn nhỏ hơn");
+            } else {
+                alert("Chúc mừng bạn đã đoán chính xác");
+                break;
+            }
+            selectNum = +prompt("Số bạn chọn là")
+            i++
+
+        }
+        if (selectNum != randomNum) {
+            alert("Bạn đã hết lượt đoán, trò chơi kết thúc!!!");
+
+        }
+    }
+</script>

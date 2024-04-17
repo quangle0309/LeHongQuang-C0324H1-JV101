@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Yêu cầu tăng giảm nhiệt độ</title>
+</head>
+<body>
+
+</body>
+</html>
+<script>
+    let i = +prompt("Nhập vào nhiệt độ");
+    while (i > 100 || i < 20) {
+        if (i > 100) {
+            i = +prompt("Nhiệt độ quá cao vui lòng giảm nhiệt độ");
+            if (i > 20 && i < 100) {
+                break;
+            }
+        } else {
+            i = +prompt("Nhiệt độ quá thấp vui lòng tăng nhiệt độ");
+            if (i > 20 && i <100) {
+                break;
+            }
+        }
+    }
+    document.write("Nhiệt độ là: " + i);
+
+</script>

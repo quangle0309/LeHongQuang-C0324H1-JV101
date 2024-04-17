@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Kiểm tra số nguyên tố</title>
+</head>
+<body>
+
+</body>
+</html>
+<script>
+    let num = +prompt("Nhập vào số cần kiểm tra");
+    let i = 2;
+    if (num <= 1) {
+        alert("không phải số nguyên tố");
+        num = +prompt("nhập vào số cần kiểm tra");
+    }
+    while (i < num){
+        if (num % i === 0 ) {
+            alert("không phải số nguyên tố");
+            num = +prompt("nhập vào số cần kiểm tra");
+        }
+        i++;
+    }
+    alert(num + " Là số nguyên tố!");
+</script>

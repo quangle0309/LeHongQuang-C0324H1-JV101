@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Tính lãi suất ngân hàng</title>
+</head>
+<body>
+
+</body>
+</html>
+<script>
+    let money = +prompt("Nhập số tiền bạn muốn gửi");
+    let month = +prompt("Số tháng vay");
+    if (money > 0 && month > 0) {
+        //lãi ngân hàng là 5% 1 tháng
+        for (let i = 1; i <= month; i++) {
+            money = money + (money * 5 / 100);
+        }
+        alert("Tổng tiền gốc và lãi của bạn sau " + month + " tháng là: " + money);
+    } else {
+        alert("Bạn đã nhập sai dữ liệu");
+    }
+
+</script>

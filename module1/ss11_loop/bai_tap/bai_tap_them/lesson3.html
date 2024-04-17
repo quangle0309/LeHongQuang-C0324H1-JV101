@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>old father and child</title>
+</head>
+<body>
+
+</body>
+</html>
+<script>
+    let ageFather = parseInt(prompt("Nhập vào tuổi của ba"));
+    let ageChild = parseInt(prompt("Nhập vào tuổi của con"));
+    while ((ageFather - ageChild) < 25 || ageFather < 0 || ageChild < 0) {
+        alert("Tuổi của ba phải lớn hơn con ít nhất 25 tuổi và tuổi là số lớn hơn 0");
+        ageFather = parseInt(prompt("Nhập vào tuổi của ba"));
+        ageChild = parseInt(prompt("Nhập vào tuổi của con"));
+    }
+    for (let i = 1;; i++) {
+        ageFather++;
+        ageChild++;
+        if (ageFather / ageChild === 2) {
+            document.write("Sau " + i + " năm thì tuổi của ba gấp đôi tuổi của con");
+            break;
+        }
+    }
+</script>
