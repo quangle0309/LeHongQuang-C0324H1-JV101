@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+</body>
+</html>
+<script>
+    function isMax() {
+        let myArray = [4, 9, 12, 21, 5, 7, 11, 2, 13, 0];
+        let max = myArray[0];
+        let length = myArray.length;
+        for (let i = 1; i < length; i++) {
+            if (max < myArray[i]) {
+                max = myArray[i];
+            }
+        }
+        console.log(`Vị trí ${myArray.indexOf(max)}: giá trị = ${max}`);
+    }
+    isMax()
+
+</script>

@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Từ điển việt anh</title>
+</head>
+<body>
+<input type="text" id="text-in"/>
+<button onclick="changeText()">Search</button>
+<p id="text-out"></p>
+</body>
+</html>
+<script>
+    let textEng = ['book', 'egg', 'hello', 'go', 'phone'];
+    let textVie = ['Sách', 'Trứng', 'Xin chào', 'Đi', 'Điện thoại'];
+    function changeText() {
+        let textIn = document.getElementById('text-in').value;
+        let t = textEng.indexOf(textIn);
+        document.getElementById('text-out').innerHTML = textVie[t];
+    }
+</script>

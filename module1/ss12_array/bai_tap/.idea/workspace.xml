@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="e87c1909-770d-491f-91dd-9da6f16843a5" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/Tu_dien_Viet_Anh/index.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/fake_text/index.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/fake_text/style.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/game_caro/index.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/pracrice_1/lesson1.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/pracrice_1/lesson2.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/pracrice_1/lesson3.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/pracrice_1/lesson4.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/pracrice_1/lesson5.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/pracrice_1/lesson6.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/pracrice_1/lesson7.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/pracrice_1/lesson8.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/pracrice_1/lesson9.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/su_dung_ham_trong_mang/lesson3.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../ss11_loop/bai_tap/luyen_tap/lesson1.html" beforeDir="false" afterPath="$PROJECT_DIR$/../../ss11_loop/bai_tap/luyen_tap/lesson1.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../ss11_loop/bai_tap/luyen_tap/lesson8.html" beforeDir="false" afterPath="$PROJECT_DIR$/../../ss11_loop/bai_tap/luyen_tap/lesson8.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/su_dung_ham_trong_mang/lesson1.html" beforeDir="false" afterPath="$PROJECT_DIR$/su_dung_ham_trong_mang/lesson1.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../thuc_hanh/average.html" beforeDir="false" afterPath="$PROJECT_DIR$/../thuc_hanh/average.html" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="CSS File" />
+        <option value="HTML File" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/../../.." />
+  </component>
+  <component name="ProjectColorInfo">{
+  &quot;customColor&quot;: &quot;&quot;,
+  &quot;associatedIndex&quot;: 1
+}</component>
+  <component name="ProjectId" id="2fDFgh3ApR7KgASu2Go95kCa6xB" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "DefaultHtmlFileTemplate": "HTML File",
+    "JavaScript Debug.index.html.executor": "Run",
+    "JavaScript Debug.lesson1.html.executor": "Run",
+    "JavaScript Debug.lesson2.html.executor": "Run",
+    "JavaScript Debug.lesson3.html.executor": "Run",
+    "JavaScript Debug.lesson4.html.executor": "Run",
+    "JavaScript Debug.lesson6.html.executor": "Run",
+    "JavaScript Debug.lesson7.html.executor": "Run",
+    "JavaScript Debug.lesson8.html.executor": "Run",
+    "JavaScript Debug.lesson9.html.executor": "Run",
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "git-widget-placeholder": "main",
+    "last_opened_file_path": "D:/workSpace/codeGym/module1/ss11_loop/bai_tap/luyen_tap2/factorial.html",
+    "list.type.of.created.stylesheet": "CSS",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "vue.rearranger.settings.migration": "true"
+  }
+}]]></component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="e87c1909-770d-491f-91dd-9da6f16843a5" name="Changes" comment="" />
+      <created>1713327854484</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1713327854484</updated>
+      <workItem from="1713327855498" duration="1285000" />
+      <workItem from="1713335630230" duration="2035000" />
+      <workItem from="1713447244926" duration="431000" />
+      <workItem from="1713491820576" duration="3195000" />
+      <workItem from="1713496522183" duration="438000" />
+      <workItem from="1713501835692" duration="904000" />
+      <workItem from="1713504544227" duration="11509000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+</project>

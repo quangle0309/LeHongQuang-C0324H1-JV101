@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+</body>
+</html>
+<script>
+    let myArray = [4, 9, 12, 21, 5, 7, 11, 2, 13, 0];
+    let v = +prompt("Nhập vào số nguyên v: ");
+    let num = myArray.indexOf(v);
+    if (num !== -1) {
+        myArray.splice(num, 1);
+        console.log(myArray);
+    }
+</script>

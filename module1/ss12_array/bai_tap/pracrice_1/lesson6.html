@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+</body>
+</html>
+<script>
+    let lengthArr = +prompt("Nhập tổng số phần tử của mảng: ");
+    let myArr = new Array(lengthArr);
+    let i = 0;
+    do {
+        myArr[i] = +prompt(`Nhập vào phần tử: ${i}`)
+        i++
+    } while (i < lengthArr);
+    let v = +prompt("Nhập số nguyên v cần tìm");
+    let check = myArr.indexOf(v);
+    if (check !== -1) {
+        alert('V is in the array');
+    } else {
+        alert('V is not in the array');
+    }
+</script>

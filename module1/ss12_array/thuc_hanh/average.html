@@ -18,11 +18,13 @@
             count = +prompt("Nhập tổng số học sinh: ");
             if (!Number.isInteger(count) || count < 0) {
                 alert("Số học sinh là 1 số nguyên lớn hơn 0!!! Vui lòng nhập lại.");
+            } else if (count > 100) {
+                alert("Số học sinh trong lớp phải ít hơn 100");
             } else if (count === 0) {
                 alert("Đã hủy chương trình!!!");
                 return;
             }
-        } while (!Number.isInteger(count) || count <= 0);
+        } while (!Number.isInteger(count) || count <= 0 || count > 100);
 
         let pointClass = new Array(count);
         let length = pointClass.length;

@@ -14,8 +14,7 @@
         let selectNum = +prompt("Số bạn chọn là");
         let randomNum = Math.floor(Math.random() * (num+1));
         let i = 0;
-
-        while (i < 3) {
+        do {
             if (selectNum > randomNum) {
                 alert("Số bạn chọn lớn hơn");
             } else if (selectNum < randomNum) {
@@ -27,8 +26,8 @@
             selectNum = +prompt("Số bạn chọn là")
             i++
 
-        }
-        if (selectNum != randomNum) {
+        } while (i < 2)
+        if (selectNum !== randomNum) {
             alert("Bạn đã hết lượt đoán, trò chơi kết thúc!!!");
 
         }

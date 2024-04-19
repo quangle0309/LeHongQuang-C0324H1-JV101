@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<p id="caroGame"></p>
+</body>
+</html>
+<script>
+    let b = document.getElementById("caroGame");
+    let data = '';
+    let board = [];
+    let turn = 1;
+    for (let i = 0; i < 5; i++) {
+        board[i] = ['( )', '( )', '( )', '( )', '( )'];
+    }
+    for (let i = 0; i < 5; i++) {
+        data += "<br/>";
+        for (let j = 0; j < 5; j++) {
+            data += board[i][j] + "&nbsp";
+        }
+    }
+    data += "<br/><br/><input type='button' value='Change value' onclick='changeValue()'/>"
+    b.innerHTML = data;
+
+    function changeValue() {
+        let positionX = +prompt("X: ");
+        let positionY = +prompt("Y: ");
+        data = "";
+        do {
+            turn++;
+            if (turn % 2 === 0) {
+                board[positionX][positionY] = "&nbsp x";
+            } else {
+                board[positionX][positionY] = "&nbsp o";
+            }
+            break;
+        } while (turn <= 25);
+        for (let i = 0; i < 5; i++) {
+            data += "<br/>";
+            for (let j = 0; j < 5; j++) {
+                data += board[i][j] + "&nbsp;&nbsp";
+            }
+        }
+        data += "<br/><br/><input type='button' value='Change Value' onclick='changeValue()'>"
+        b.innerHTML = "<hr/>" + data;
+
+        for (let i = 0; i < 5; i++) {
+            for (let j = 0; j < 5; j++) {
+                if (board[i][j] === '&nbsp x' && board[i][j + 1] === '&nbsp x' && board[i][j + 2] === '&nbsp x' ||
+                    board[i][j] === '&nbsp x' && board[i + 1][j] === '&nbsp x' && board[i + 2][j] === '&nbsp x') {
+                    alert("x Thắng");
+                    location.reload();
+                } else if (board[i][j] === '&nbsp o' && board[i][j + 1] === '&nbsp o' && board[i][j + 2] === '&nbsp o' ||
+                    board[i][j] === '&nbsp o' && board[i + 1][j] === '&nbsp o' && board[i + 2][j] === '&nbsp o') {
+                    alert("o Thắng");
+                    location.reload();
+                }
+            }
+        }
+    }
+</script>

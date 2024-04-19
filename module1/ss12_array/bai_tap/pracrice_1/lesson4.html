@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+</body>
+</html>
+<script>
+    let lengthArr = +prompt("Nhập tổng số phần tử của mảng: ");
+    let myArr = new Array(lengthArr);
+    let i = 0;
+    do {
+        myArr[i] = +prompt(`Nhập vào phần tử: ${i}`)
+        i++
+    } while (i < lengthArr);
+
+    myArr.reverse();
+    console.log(myArr);
+</script>

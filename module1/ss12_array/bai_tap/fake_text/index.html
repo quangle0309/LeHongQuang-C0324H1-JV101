@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Type text</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<h1>Type text</h1>
+<div class="input">
+    <textarea name="txt" id="text-out" onkeydown="typeTxt()"></textarea>
+</div>
+</body>
+</html>
+<script>
+    let a = [], n = "";
+    a[1] = 'T';
+    a[2] = 'Ô';
+    a[3] = 'I';
+    a[4] = ' ';
+    a[5] = 'L';
+    a[6] = 'À';
+    a[7] = ' ';
+    a[8] = 'Q';
+    a[9] = 'U';
+    a[10] = 'A';
+    a[11] = 'N';
+    a[12] = 'G';
+    a[13] = '!';
+    let t;
+    let j;
+    function typeTxt() {
+        t = document.getElementById('text-out').value;
+        j = t.length;
+        if (j > 0) {
+            for (let i = 1; i <= j; i++) {
+                n = n + a[i];
+                if (i === 14) {
+                    document.getElementById('text-out').innerHTML = "";
+                    n = "";
+                }
+            }
+        }
+        document.getElementById('text-out').value = n;
+        n = "";
+        setTimeout("typeTxt()", 1);
+    }
+
+</script>
