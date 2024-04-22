@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+</body>
+</html>
+<script>
+    let arrLength;
+    let count = 0;
+    do {
+        arrLength = +prompt('Nhập vào số phần tử trong mảng: ');
+    } while (!Number.isInteger(arrLength) || arrLength < 1 || arrLength > 100);
+
+    let arr = new Array(arrLength);
+
+    for (let i = 0; i < arrLength; i++) {
+        arr[i] = prompt('Nhập phần tử ' + i + ' trong mảng: ');
+        if (!isNaN(arr[i])) {
+            count++;
+        }
+    }
+
+    console.log("Số ký tự số trong mảng là: " + count);
+
+</script>

@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+</body>
+</html>
+<script>
+    function isNumber(number) {
+        if (isNaN(number)) {
+            return false;
+        } else {
+            return true;
+        }
+    }
+
+    let num = prompt("Nhập vào giá trị cần kiểm tra: ");
+    if (isNumber(num)) {
+        alert(num + " là chữ số");
+    } else {
+        alert(num + " không phải là chữ số");
+    }
+</script>

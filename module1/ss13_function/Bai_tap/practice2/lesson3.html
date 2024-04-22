@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Tính giai thừa số bất kì</title>
+</head>
+<body>
+
+</body>
+</html>
+<script>
+    function factorial(number) {
+        let count = 1;
+        for(let i = 1; i <= number; i++) {
+            count *= i;
+        }
+        return count;
+    }
+    let num = +prompt("Nhập vào một số: ");
+    alert(`Giai thừa của ${num} là ${factorial(num)}`);
+</script>

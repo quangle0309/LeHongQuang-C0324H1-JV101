@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <p id ="feet-out"></p>
+    <p id ="meter-out"></p>
+</body>
+</html>
+<script>
+    function feetToMeter(foot) {
+        return 0.305 * foot;
+    }
+    function meterToFeet(meter) {
+        return 3.279 * meter;
+    }
+    let m = +prompt("Nhập vào meter: ");
+    let f = +prompt("Nhập vào feet: ");
+
+    document.getElementById("feet-out").innerHTML = `${m}meter = ${meterToFeet(m)}feet`;
+    document.getElementById("meter-out").innerHTML = `${f}feet = ${feetToMeter(f)}meter`;
+</script>

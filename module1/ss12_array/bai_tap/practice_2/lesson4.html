@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+</body>
+</html>
+<script>
+    let myString = prompt("Nhập chuỗi bạn muốn kiểm tra: ");
+    let count = 1;
+    let newStr = myString.trim();
+    for (let i = 0; i < myString.length; i++) {
+        if (newStr[i] === " ") {
+            count++;
+        }
+    }
+
+    console.log('Số từ trong chuỗi là: ' + count);
+
+</script>

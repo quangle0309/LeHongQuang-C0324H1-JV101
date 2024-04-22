@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+</body>
+</html>
+<script>
+    function isInteger(number) {
+        if (number >= 0) {
+            return true;
+        } else {
+            return false;
+        }
+    }
+
+    let num = +prompt("Nhập vào một số cần kiểm tra: ");
+    if (isInteger(num)) {
+        alert(num + " là số nguyên dương");
+    } else {
+        alert(num + " không phải là số nguyên dương");
+    }
+</script>

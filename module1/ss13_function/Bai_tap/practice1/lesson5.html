@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <p id="star-out"></p>
+</body>
+</html>
+<script>
+    let stars = ['Polaris', 'Aldebaran', 'Deneb', 'Vega', 'Altair', 'Dubhe', 'Regulus'];
+    let constellation = ['Ursa Minor', 'Tarurus', 'Cygnus', 'Lyra', 'Aquila', 'Ursa Major', 'Leo'];
+    function searchStar(star) {
+        let index = stars.indexOf(star);
+        if (index === -1) {
+            document.getElementById("star-out").innerHTML = "Không tìm thấy ngôi sao!";
+        } else {
+            document.getElementById("star-out").innerHTML = constellation[index];
+        }
+    }
+    let nameStar = prompt("Nhập ngôi sao cần tìm: ");
+    searchStar(nameStar);
+</script>
