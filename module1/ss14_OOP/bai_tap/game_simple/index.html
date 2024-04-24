@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>game vui</title>
+</head>
+<body>
+    <div id="game"></div>
+    <div id="game2"></div>
+</body>
+</html>
+<script>
+    class Hero {
+        constructor (image, top, left, size, speed) {
+            this.image = image;
+            this.top = top;
+            this.left = left;
+            this.size = size;
+            this.speed = speed;
+        }
+
+        getHeroElement() {
+            return '<img alt="image" width="'+ this.size + '"' +
+                ' height="'+ this.size + '"' +
+                ' src="' + this.image +'"' +
+                ' style="top: '+ this.top + 'px; left:'+this.left+'px;position:absolute;" />';
+        }
+
+        moveRight() {
+            this.left += this.speed;
+            console.log("Ok: " + this.left);
+        }
+
+    }
+
+    let hero = new Hero('khunglong.png', 100, 30, 200, 2);
+
+    function start(){
+        if(hero.left < window.innerWidth - hero.size){
+            hero.moveRight();
+        }
+        document.getElementById('game').innerHTML = hero.getHeroElement();
+        setTimeout(start, 1)
+    }
+
+    let hero2 = new Hero('pikachu.png', 350, 30, 200, 1);
+
+    function start2(){
+        if(hero2.left < window.innerWidth - hero.size){
+            hero2.moveRight();
+        }
+        document.getElementById('game2').innerHTML = hero2.getHeroElement();
+        setTimeout(start2, 1)
+    }
+    start2();
+    start();
+</script>
