@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Game caro</title>
+</head>
+<body>
+
+</body>
+</html>
+<script>
+    let arr = [["", "", "", "", ""], ["", "", "", "", "", ""], ["", "", "", "", ""], ["", "", "", "", ""], ["", "", "", "", "", ""]];
+    let board = "<table>"
+    for (let i = 0; i < 5; i++) {
+        board += "<tr>";
+        for (let j = 0; j < 5; j++) {
+            board += "<td style='border: solid 1px black; width:100px; height:100px'>" + arr[i][j] + "<td/>";
+        }
+        board += "<tr/>"
+    }
+    board += "<table/>";
+    document.write(board);
+</script>

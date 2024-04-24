@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Vẽ Hình chữ nhật</title>
+    <script src="main.js"></script>
+</head>
+<body>
+    <label for="width-in">Nhập chiều dài: </label>
+    <input type="text" id="width-in">
+    <label for="height-in">Nhập chiều rộng: </label>
+    <input type="text" id="height-in">
+    <label for="red">Chọn màu: </label>
+    <input type="number" id="red" placeholder="red">
+    <input type="number" id="green" placeholder="green">
+    <input type="number" id="blue" placeholder="blue">
+    <button onclick="getValue(10, 10)">Run</button>
+    <p id="value-out">Result:</p>
+    <canvas id="myCanvas" width="1360" height="1000" style="border: 1px solid black; margin-top: 10px"></canvas>
+</body>
+</html>

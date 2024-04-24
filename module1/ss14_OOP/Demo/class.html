@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+</body>
+</html>
+<script>
+    // function student(code, name, address) {
+    //     this.code = code;
+    //     this.name = name;
+    //     this.address = address;
+    // }
+    //
+    // let quang = new student(17, "Lê Hồng Quang", "Hà Tĩnh");
+
+    //Cách khai báo class 2:
+
+    class student {
+        constructor(code, name, address) {
+            this.code = code;
+            this.name = name;
+            this.address = address;
+        }
+        //Hành vi
+        diHoc() {
+            alert(this.name + " đi học");
+        }
+    }
+
+    let quang = new student(17, "Lê Hồng Quang", "Hà Tĩnh");
+    quang.diHoc();
+</script>

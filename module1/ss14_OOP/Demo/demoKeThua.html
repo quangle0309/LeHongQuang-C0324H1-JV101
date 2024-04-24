@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+</body>
+</html>
+<script>
+    // Lớp cha
+    class Animal {
+        constructor(name) {
+            this.name = name;
+        }
+        // Phương thức của lớp cha
+        eat() {
+            console.log(`${this.name} is eating.`);
+        }
+
+        // Phương thức của lớp cha
+        sleep() {
+            console.log(`${this.name} is sleeping.`);
+        }
+    }
+
+    // Lớp con kế thừa từ lớp cha
+    class Dog extends Animal {
+        constructor(name, breed) {
+            super(name);
+            this.breed = breed;
+        }
+
+        // Phương thức riêng của lớp con
+        bark() {
+            console.log(`${this.name} is barking.`);
+        }
+    }
+
+    // Tạo một đối tượng từ lớp con
+    let dog = new Dog("Buddy", "Golden Retriever");
+
+    // Gọi các phương thức từ lớp cha
+    dog.eat(); // Output: Buddy is eating.
+    dog.sleep(); // Output: Buddy is sleeping.
+
+    // Gọi phương thức của lớp con
+    dog.bark(); // Output: Buddy is barking.
+
+</script>
