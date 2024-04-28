@@ -1,21 +1,24 @@
 const $ = document.querySelector.bind(document);
-const $$ = document.querySelectorAll.bind(document);
 const trackName = $('#track-name');
 const cdThumb = $('#cd');
 const audio = $('#audio');
 const singer = $('#singer-name');
 const playing = $('#playing');
 const progress = $('#progress');
-const skip = $('#skip');
-const backward = $('#backward')
-let isPause = true;
+const skipBtn = $('#skip');
+const backwardBtn = $('#backward');
+const randomBtn = $('#shuffle');
+const repeatBtn = $('#repeat');
+let isPause = false;
+let isRandom = false;
+let isRepeat = false;
+
 
 const app = {
     currentIndex: 0,
     songs: [
-        {
-            name: 'Chỉ Bằng Cái Gật Đầu',
-            singer: 'Yan Nguyễn',
+        {   name: 'Gửi Người Em Gái Hà Tĩnh (Remix)',
+            singer: 'Thái Học',
             path: 'song/song1.mp3',
             image: 'image/image1.jpg',
         },
@@ -32,8 +35,8 @@ const app = {
             image: 'image/image3.jpg',
         },
         {
-            name: 'Gửi Người Em Gái Hà Tĩnh (Remix)',
-            singer: 'Thái Học',
+            name: 'Chỉ Bằng Cái Gật Đầu',
+            singer: 'Yan Nguyễn',
             path: 'song/song4.mp3',
             image: 'image/image4.jpg',
         },
@@ -92,47 +95,45 @@ const app = {
         audio.src = this.getCurrentSong().path
     },
 
-    nextSong: function() {
+    nextSong: function () {
         this.currentIndex++
         if (this.currentIndex > this.songs.length) {
             this.currentIndex = 0;
         }
-        if (isPause) {
-            this.loadCurrentSong()
-            audio.pause()
-        } else {
-            this.loadCurrentSong()
-            audio.play()
-        }
+        this.loadCurrentSong()
     },
 
-    backSong: function() {
+    backSong: function () {
         this.currentIndex--
         if (this.currentIndex < 0) {
             this.currentIndex = this.songs.length - 1;
         }
-        if (isPause) {
-            this.loadCurrentSong()
-            audio.pause()
-        } else {
-            this.loadCurrentSong()
-            audio.play()
-        }
+        this.loadCurrentSong()
+    },
+
+    playRandomSong: function () {
+        let newCurrentIndex;
+        do {
+            newCurrentIndex = Math.floor(Math.random() * this.songs.length)
+        } while (newCurrentIndex === this.currentIndex);
+        this.currentIndex = newCurrentIndex;
+        this.loadCurrentSong();
     },
 
     handleEvent: function () {
+        const _this = this;
         //play and pause
         playing.onclick = function () {
             if (isPause) {
-                playing.innerHTML = '<i class="fa-solid fa-pause"></i>'
-                isPause = !isPause;
-                audio.play()
-                cdThumbAnimate.play()
-            } else {
                 playing.innerHTML = '<i class="fa-solid fa-play"></i>';
                 isPause = !isPause;
                 audio.pause()
                 cdThumbAnimate.pause()
+            } else {
+                playing.innerHTML = '<i class="fa-solid fa-pause"></i>'
+                isPause = !isPause;
+                audio.play()
+                cdThumbAnimate.play()
             }
         }
 
@@ -155,12 +156,52 @@ const app = {
         })
         cdThumbAnimate.pause()
 
-        skip.onclick = function() {
-            app.nextSong()
+        const nextSong = skipBtn.onclick = function () {
+            if (isRandom) {
+                _this.playRandomSong()
+            } else {
+                _this.nextSong()
+            }
+            if(isPause) {
+                audio.play()
+            }
         }
 
-        backward.onclick = function() {
-            app.backSong()
+        backwardBtn.onclick = function () {
+            if (isRandom) {
+                _this.playRandomSong()
+            } else {
+                _this.backSong()
+            }
+            if(isPause) {
+                audio.play()
+            }
+        }
+
+        randomBtn.onclick = function () {
+            isRandom = !isRandom;
+            if (isRandom) {
+                randomBtn.style.color = "#ff253a";
+            } else {
+                randomBtn.style.color = "#000000ff";
+            }
+        }
+
+        repeatBtn.onclick = function () {
+            isRepeat = !isRepeat;
+            if (isRepeat) {
+                repeatBtn.style.color = "#ff253a";
+            } else {
+                repeatBtn.style.color = "#000000ff";
+            }
+        }
+
+        audio.onended = function () {
+            if (isRepeat) {
+                audio.play();
+            } else {
+                nextSong();
+            }
         }
     },
 
