@@ -10,11 +10,82 @@
 </html>
 <script>
     class Mobile {
-        constructor(pin, message, sentMessage) {
+        constructor(pin, draft, inbox, sentMessage, status, phone) {
             this.pin = pin;
-            this.message = "";
+            this.draft = draft;
+            this.inbox = inbox;
             this.sentMessage = sentMessage;
+            this.status = status;
+            this.phone = phone;
         }
 
+        isTurnOnOrOff() {
+            return this.status;
+        }
+
+        turnOn() {
+            this.status = true;
+        }
+
+        turnOff() {
+            this.status = false;
+        }
+
+        sacPin() {
+            // Bất đồng bộ
+            // setInterval và clearInterval
+            while (this.pin <= 100) {
+                this.pin = this.pin + 0.01;
+            }
+        }
+
+        soanTinNhan() {
+            if (this.status) {
+                this.draft = prompt("Nhập tin nhắn: ");
+                this.pin = this.pin - 0.1;
+            }
+        }
+
+        nhanTinNhan(message, mobile) {
+            if (this.status) {
+                this.inbox.unshift(message + "~" + mobile.phone);
+                this.pin = this.pin - 0.1;
+            }
+        }
+
+        guiTinNhan(mobile) {
+            // let temp = confirm()
+            if (this.status) {
+                this.soanTinNhan();
+                this.sentMessage.unshift(this.draft);
+                mobile.nhanTinNhan(this.draft, this);
+                this.draft = "";
+                this.pin = this.pin - 0.1;
+            }
+        }
+
+        xemTinDaGui() {
+            if (this.status) {
+                for (let i = 0; i < this.sentMessage.length; i++) {
+                    // Hiển thị tin nhắn
+                }
+                this.pin = this.pin - 0.1;
+            }
+        }
+
+        xemTinNhanDen() {
+            if (this.status) {
+                for (let i = 0; i < this.inbox.length; i++) {
+                    // Hiển thị tin nhắn
+                }
+                this.pin = this.pin - 0.1;
+            }
+        }
+
+//   Tương tự là cho tin nhắn hộp thư đến
+// BTVN: Triển khai thêm giảm pin khi thực hiện chức năng
+// Kiểm tra điện thoại bật thì mới cho sử dụng các chức năng
+
     }
+
 </script>
