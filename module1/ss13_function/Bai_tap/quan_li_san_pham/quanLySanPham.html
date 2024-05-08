@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <h1>Quản Lý Sản Phẩm</h1>
+    <table>
+        <tr>
+            <td>
+                <label for="name">Tên sản phẩm:</label>
+            </td>
+            <td>
+                <input id="name" type="text">
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <label for="id">id: </label>
+            </td>
+            <td>
+                <input id="id" type="number">
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <label for="produce">Nhà sản xuất: </label>
+            </td>
+            <td>
+                <input id="produce" type="text">
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <label for="price">Giá bán($): </label>
+            </td>
+            <td>
+                <input id="price" type="text">
+            </td>
+        </tr>
+        <tr>
+            <td></td>
+            <td>
+                <button onclick="addItem()">Thêm sản phẩm</button>
+            </td>
+        </tr>
+    </table>
+    <table border="solid 1px black" width="800px">
+        <tr>
+            <th colspan="5">Danh sách sản phẩm</th>
+        </tr>
+        <tr>
+            <th>ID</th>
+            <th>Tên sản phẩm</th>
+            <th>Nhà sản xuất</th>
+            <th>Giá bán</th>
+            <th>Tùy chọn</th>
+        </tr>
+        <tbody id="list-items">
+        </tbody>
+    </table>
+</body>
+</html>
+<script>
+    const $ = document.querySelector.bind(document);
+    const listItems = $('#list-items');
+    let listPhone = [];
+    function addItem() {
+        let name = $('#name').value;
+        let id = $('#id').value;
+        let produce = $('#produce').value;
+        let price = $('#price').value;
+
+
+    }
+
+    class Phone {
+        constructor(name, id, produce, price) {
+            this.name = name;
+            this.id = id;
+            this.produce = produce;
+            this.price = price;
+        }
+        getName() {
+            return this.name;
+        }
+        getId() {
+            return this.id;
+        }
+        getProduce() {
+            return this.produce;
+        }
+        getPrice() {
+            return this.price;
+        }
+        setName() {
+            this.name = name;
+        }
+        setId() {
+            this.id = id;
+        }
+        setProduce() {
+            this.produce = produce;
+        }
+        setPrice() {
+            this.price = price;
+        }
+        edit(name, id, produce, price) {
+            this.name = name;
+            this.id = id;
+            this.produce = produce;
+            this.price = price;
+        }
+    }
+
+    let phone1 = new Phone('iphone5', 1,'apple',500);
+
+    class Management {
+        constructor(arr) {
+            this.phone = arr;
+        }
+
+        showList() {
+            let table = '';
+            for (let i = 0; i < this.phone.length; i++) {
+                table += '<tr>';
+                table += `<td>${this.phone[i].id}</td>`;
+                table += `<td>${this.phone[i].name}</td>`;
+                table += `<td>${this.phone[i].produce}</td>`;
+                table += `<td>${this.phone[i].price}</td>`;
+                table += '<td><button onclick="delete('+ i +')" style="background: red">Xóa</button></td>';
+                table += '</tr>';
+            }
+            listItems.innerHTML = table;
+        }
+
+        addPhone(arr) {
+            this.phone.push(arr);
+        }
+
+    }
+</script>

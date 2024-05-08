@@ -10,7 +10,8 @@ const backwardBtn = $('#backward');
 const randomBtn = $('#shuffle');
 const repeatBtn = $('#repeat');
 const playlist = $('#list-song');
-const thisSong = $('.song');
+const timeUpdate = $('#time-update');
+const timeCurrentSong = $('#time-currentSong');
 let isPause = false;
 let isRandom = false;
 let isRepeat = false;
@@ -108,13 +109,6 @@ const app = {
         });
         playlist.innerHTML = htmls.join("");
     },
-    defineProperties: function () {
-        Object.defineProperty(this, "currentSong", {
-            get: function () {
-                return this.songs[this.currentIndex];
-            }
-        });
-    },
 
     getCurrentSong: function () {
         return this.songs[this.currentIndex];
@@ -148,6 +142,7 @@ const app = {
             this.render();
         }
     },
+
     playRandomSong: function () {
         let newCurrentIndex;
         do {
@@ -158,21 +153,43 @@ const app = {
         this.render();
     },
 
+    secondToMinute: function (seconds) {
+        let minutes = Math.floor(seconds / 60);
+        let remainingSeconds = Math.floor(seconds % 60);
+        return (minutes < 10 ? "0" : "") + minutes + ":" +
+            (remainingSeconds < 10 ? "0" : "") + remainingSeconds;
+    },
+
+    getTimeCurrentSong: function () {
+        if (!isNaN(audio.duration)) {
+            timeCurrentSong.innerHTML = this.secondToMinute(audio.duration);
+        } else {
+            timeCurrentSong.innerHTML = "00:00";
+        }
+    },
+
+    //keyframes quay 360deg
+    cdThumbAnimate: cdThumb.animate([
+        {transform: 'rotate(360deg)'}
+    ], {
+        duration: 10000,
+        iterations: Infinity
+    }),
+
     handleEvent: function () {
         const _this = this;
         //play and pause
         playing.onclick = function () {
             if (isPause) {
                 playing.innerHTML = '<i class="fa-solid fa-play"></i>';
-                isPause = !isPause;
-                audio.pause()
-                cdThumbAnimate.pause()
+                audio.pause();
+                _this.cdThumbAnimate.pause();
             } else {
-                playing.innerHTML = '<i class="fa-solid fa-pause"></i>'
-                isPause = !isPause;
-                audio.play()
-                cdThumbAnimate.play()
+                playing.innerHTML = '<i class="fa-solid fa-pause"></i>';
+                audio.play();
+                _this.cdThumbAnimate.play();
             }
+            isPause = !isPause;
         }
 
 
@@ -180,20 +197,15 @@ const app = {
             if (audio.duration) {
                 progress.value = Math.floor(audio.currentTime / audio.duration * 100);
             }
+            timeUpdate.innerHTML = _this.secondToMinute(audio.currentTime);
+            _this.getTimeCurrentSong();
         }
 
         progress.onchange = function (e) {
             audio.currentTime = audio.duration / 100 * e.target.value;
         }
 
-        //keyframes quay 360deg
-        const cdThumbAnimate = cdThumb.animate([
-            {transform: 'rotate(360deg)'}
-        ], {
-            duration: 10000,
-            iterations: Infinity
-        })
-        cdThumbAnimate.pause()
+        this.cdThumbAnimate.pause();
 
         const nextSong = skipBtn.onclick = function () {
             if (isRandom) {
@@ -242,12 +254,31 @@ const app = {
                 nextSong();
             }
         }
+
+        //Lắng nghe hành vi khi click vào play-list
+        playlist.onclick = function (e) {
+            const songNode = e.target.closest('.song:not(.active)');
+            if (songNode || e.target.closest('.option')) {
+                if (songNode) {
+                    _this.currentIndex = +songNode.dataset.index;
+                    _this.loadCurrentSong();
+                    _this.render();
+                    _this.cdThumbAnimate.play();
+                    playing.innerHTML = '<i class="fa-solid fa-pause"></i>'
+                    if (!isPause) {
+                        isPause = !isPause;
+                    }
+                    audio.play();
+                }
+            }
+        }
     },
 
     start: function () {
         this.render();
         this.loadCurrentSong();
         this.handleEvent();
+        this.getTimeCurrentSong();
     }
 }
 app.start();

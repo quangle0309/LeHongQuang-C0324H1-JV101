@@ -9,16 +9,25 @@
 <body>
     <div id="app-music">
         <div id="bg-art"></div>
-        <div id="cd">
+        <div class="main" id="cd">
             <img id="cd-image" src="image/song1.jpg" alt="img">
         </div>
-        <div id="control-player">
+        <div id="move-page">
+            <i id="move-left" class="fa-solid fa-angle-left"></i>
+            <i id="move-right" class="fa-solid fa-angle-right"></i>
+        </div>
+        <div class="main" id="control-player">
             <div id="controls">
                 <div id="infor-control">
                     <h2 id="track-name">Name song</h2>
                     <p id="singer-name">Tên ca sĩ</p>
+                    <div id="time">
+                        <p id="time-update">00:00</p>
+                        <p id="time-currentSong">00:00</p>
+                    </div>
                     <input id="progress" type="range" min="0" max="100" step="1" value="0">
                     <audio id="audio" src=""></audio>
+
                 </div>
                 <div id="btn-control">
                     <div id="repeat">
@@ -39,7 +48,7 @@
                 </div>
             </div>
         </div>
-        <div id="list-song">
+        <div class="main" id="list-song">
 
         </div>
     </div>

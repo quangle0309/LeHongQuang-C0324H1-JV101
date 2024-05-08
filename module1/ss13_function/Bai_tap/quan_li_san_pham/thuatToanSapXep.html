@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+</body>
+</html>
+<script>
+    //thuat toan sap xep
+    let myArr = [1,4,6,2,5,9,11];
+    let length = myArr.length;
+    let temp;
+
+    // Sap xep tu be den lon
+    for (let i = 0; i < length - 1; i++) {
+        for (let j = i + 1; j < length; j++) {
+            if (myArr[i] > myArr[j]) {
+                temp = myArr[i];
+                myArr[i] = myArr[j];
+                myArr[j] = temp;
+            }
+        }
+    }
+    document.write(myArr);
+</script>
